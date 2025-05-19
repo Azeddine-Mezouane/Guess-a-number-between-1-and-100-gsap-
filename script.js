@@ -4,13 +4,15 @@ console.log(secretNum);
 
 function guessFunction() {
   let inputSelct = document.querySelector("input");
+
   let message = document.querySelector(".chancesP");
   let guessNumber = Number(inputSelct.value);
   let body = document.querySelector("body");
-  let btn = document.querySelector("button");
+  let btn = document.querySelector(".button");
   let cont = document.querySelector(".cont");
   let title = document.querySelector("h1");
   let bravo = document.querySelector(".bravo");
+  let btnRestart = document.querySelector(".btn-restart");
 
   if (guessNumber < 1 || guessNumber > 100 || isNaN(guessNumber)) {
     message.textContent = "enter a number between 1 and 100";
@@ -32,7 +34,13 @@ function guessFunction() {
       .to(btn, { duration: 0.4, opacity: 0 }, "<")
       .fromTo(
         bravo,
-        { y: -50 },
+        { y: -100 },
+        { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
+        "<+0.2"
+      )
+      .fromTo(
+        btnRestart,
+        { y: -40 },
         { y: 0, opacity: 1, duration: 0.4, ease: "power2.out" },
         "<+0.2"
       );
@@ -68,3 +76,7 @@ document.querySelector("input").addEventListener("keydown", function (e) {
     guessFunction();
   }
 });
+function restart() {
+  window.location.reload();
+  inputSelct.focus();
+}
