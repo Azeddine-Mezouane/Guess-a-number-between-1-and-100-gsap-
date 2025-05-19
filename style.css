@@ -1,0 +1,71 @@
+body {
+  background-color: #4a98f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.cont {
+  padding: 40px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+.bravo {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  white-space: nowrap;
+  opacity: 0;
+  color: #2bb94a;
+}
+
+.bt {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+input {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 0px 10px;
+}
+
+.button {
+  color: white;
+  background-color: #4a98f7;
+  width: 50%;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #4a98f7;
+  height: 43px;
+  cursor: pointer;
+}
+
+.chances {
+  font-size: 16px;
+  font-weight: 400;
+}
